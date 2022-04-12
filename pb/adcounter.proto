@@ -15,4 +15,5 @@ message CounterKey {
 
 message CounterValue {
   int64 value = 1;
+  string key = 2;
 }
