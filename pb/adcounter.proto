@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+option go_package = "./counter/pb";
+
+package counter;
+
+service ADCounter {
+  rpc UpdateCounter (CounterKey) returns (CounterValue) {}
+}
+
+message CounterKey {
+  string key = 1; 
+}
+
+message CounterValue {
+  int64 value = 1;
+}
